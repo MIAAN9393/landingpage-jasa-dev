@@ -244,10 +244,26 @@ h3 {
   content: "";
   position: absolute;
   inset: 12% -4% -8% 12%;
-  background: #dbeafe;
+  background: rgba(15, 118, 110, 0.14);
   border-radius: 40px;
   transform: rotate(-4deg);
   z-index: -1;
+}
+
+.brand-showcase {
+  overflow: hidden;
+  border: 1px solid rgba(223, 231, 239, 0.9);
+  border-radius: 18px;
+  background: #111827;
+  box-shadow: var(--shadow);
+}
+
+.brand-showcase img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
 }
 
 .app-window {
@@ -721,6 +737,10 @@ h3 {
   .hero {
     gap: 40px;
     padding-top: 54px;
+  }
+
+  .brand-showcase img {
+    aspect-ratio: 16 / 11;
   }
 
   h1 {
