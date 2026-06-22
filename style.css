@@ -1,14 +1,14 @@
 :root {
   --bg: #f7f9fc;
   --surface: #ffffff;
-  --surface-soft: #eef5f3;
+  --surface-soft: #f7eefb;
   --text: #18212f;
   --muted: #687385;
-  --primary: #0f766e;
-  --primary-dark: #115e59;
-  --accent: #f59e0b;
+  --primary: #7c0fb0;
+  --primary-dark: #5f0c87;
+  --accent: #d80d8d;
   --line: #dfe7ef;
-  --shadow: 0 24px 60px rgba(24, 33, 47, 0.12);
+  --shadow: 0 24px 60px rgba(77, 18, 104, 0.16);
   --radius: 8px;
   --max-width: 1120px;
 }
@@ -69,16 +69,20 @@ a {
 }
 
 .brand-mark {
-  width: 78px;
-  height: 38px;
-  flex: 0 0 78px;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
   display: grid;
   place-items: center;
   border-radius: var(--radius);
-  background: var(--primary);
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 900;
+  background: #111827;
+  box-shadow: 0 10px 22px rgba(124, 15, 176, 0.24);
+}
+
+.brand-mark img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .nav-menu {
@@ -134,7 +138,7 @@ a {
 .hero {
   min-height: calc(100vh - 76px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.86fr);
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.96fr);
   align-items: center;
   gap: 56px;
   padding-top: 56px;
@@ -217,13 +221,13 @@ h3 {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: #ffffff;
-  box-shadow: 0 14px 28px rgba(15, 118, 110, 0.24);
+  box-shadow: 0 14px 28px rgba(124, 15, 176, 0.26);
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
+  background: linear-gradient(135deg, var(--primary-dark), #b70c7a);
 }
 
 .btn-secondary {
@@ -243,26 +247,28 @@ h3 {
 .hero-visual::before {
   content: "";
   position: absolute;
-  inset: 12% -4% -8% 12%;
-  background: rgba(15, 118, 110, 0.14);
-  border-radius: 40px;
+  inset: 10% -3% -7% 10%;
+  background: linear-gradient(135deg, rgba(124, 15, 176, 0.16), rgba(216, 13, 141, 0.14));
+  border-radius: 22px;
   transform: rotate(-4deg);
   z-index: -1;
 }
 
 .brand-showcase {
   overflow: hidden;
+  padding: 18px;
   border: 1px solid rgba(223, 231, 239, 0.9);
   border-radius: 18px;
-  background: #111827;
+  background: #ffffff;
   box-shadow: var(--shadow);
 }
 
 .brand-showcase img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  aspect-ratio: 3 / 1;
+  border-radius: 12px;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -295,7 +301,7 @@ h3 {
 }
 
 .window-bar span:nth-child(3) {
-  background: #34d399;
+  background: #d80d8d;
 }
 
 .app-layout {
@@ -421,8 +427,8 @@ h3 {
 }
 
 .maintenance-card {
-  border-color: rgba(15, 118, 110, 0.32);
-  background: linear-gradient(180deg, #ffffff, #f3fbf9);
+  border-color: rgba(124, 15, 176, 0.26);
+  background: linear-gradient(180deg, #ffffff, #fff2fb);
 }
 
 .service-grid,
@@ -461,7 +467,7 @@ h3 {
   place-items: center;
   margin-bottom: 18px;
   border-radius: var(--radius);
-  background: rgba(15, 118, 110, 0.1);
+  background: rgba(124, 15, 176, 0.1);
   color: var(--primary);
   font-size: 12px;
   font-weight: 900;
@@ -480,7 +486,7 @@ h3 {
   align-items: center;
   min-height: 42px;
   padding: 9px 14px;
-  border: 1px solid rgba(15, 118, 110, 0.18);
+  border: 1px solid rgba(124, 15, 176, 0.18);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.72);
   color: var(--text);
@@ -573,7 +579,7 @@ h3 {
 }
 
 .price-card.featured {
-  border-color: rgba(15, 118, 110, 0.42);
+  border-color: rgba(124, 15, 176, 0.42);
   transform: translateY(-8px);
 }
 
@@ -583,8 +589,8 @@ h3 {
   right: 18px;
   padding: 5px 10px;
   border-radius: 999px;
-  background: rgba(245, 158, 11, 0.14);
-  color: #92400e;
+  background: rgba(216, 13, 141, 0.12);
+  color: #9d0b69;
   font-size: 12px;
   font-weight: 900;
 }
@@ -614,7 +620,7 @@ h3 {
 .contact-panel {
   padding: 52px;
   border-radius: 16px;
-  background: #172033;
+  background: linear-gradient(135deg, #241033, #4c0c64 54%, #8c0f75);
   color: #ffffff;
   box-shadow: var(--shadow);
 }
@@ -739,8 +745,12 @@ h3 {
     padding-top: 54px;
   }
 
+  .brand-showcase {
+    padding: 12px;
+  }
+
   .brand-showcase img {
-    aspect-ratio: 16 / 11;
+    aspect-ratio: 2.4 / 1;
   }
 
   h1 {
